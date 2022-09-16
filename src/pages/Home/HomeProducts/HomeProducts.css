@@ -1,0 +1,7 @@
+.home-products-container{
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+
+        background-image: url("https://i.ibb.co/yhwrRLv/Aprilia-RSV4-1100-Factory.jpg");
+        background-repeat: no-repeat;
+}

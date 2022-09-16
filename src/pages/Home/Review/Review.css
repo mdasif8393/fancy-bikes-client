@@ -1,0 +1,16 @@
+.write-review-box{
+    background-color: rgb(240, 242, 242);
+    height: 500px;
+    width: 800px;
+}
+
+.write-review-button{
+    background-color: rgb(255, 67, 59);
+    color: white;
+    border: none;
+    height: 50px;
+    width: 150px;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 600;
+}

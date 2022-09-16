@@ -1,0 +1,11 @@
+.add-admin-box{
+    background-color: rgb(240, 242, 242);
+    height: 300px;
+    width: 1000px;
+}
+
+.make-admin-button{
+    background-color: rgb(255, 67, 59);
+      color: white;
+      border: none;
+}

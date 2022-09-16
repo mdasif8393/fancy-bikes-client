@@ -1,0 +1,19 @@
+.fancy-text-color{
+    color: rgb(0, 60, 63);
+    font-weight: 700;
+}
+
+.bikes-text-color{
+    color: rgb(255, 67, 59);
+    font-weight: 700;
+}
+.header-link-text{
+    margin-left: 100px;
+    font-weight: 700;
+}
+
+.header-link-hover :hover{
+    background-color: rgb(255, 67, 59);
+    border-radius: 5px;
+    
+}

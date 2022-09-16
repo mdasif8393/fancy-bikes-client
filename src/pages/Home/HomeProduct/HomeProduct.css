@@ -1,0 +1,17 @@
+.card-title-header{
+    color: rgb(0, 60, 63);
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.card-button{
+    background-color: rgb(255, 67, 59);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 150px;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 600;
+}

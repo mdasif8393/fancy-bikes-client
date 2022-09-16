@@ -1,0 +1,11 @@
+
+  .banner-button{
+      background-color: rgb(255, 67, 59);
+      color: white;
+      border: none;
+      height: 80px;
+      width: 180px;
+      margin-top: 10px;
+      font-size: 17px;
+      font-weight: 600;
+  }
