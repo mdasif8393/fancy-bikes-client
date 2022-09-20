@@ -24,6 +24,7 @@ import AdminRoute from './pages/Login/PrivateRoute/AdminRoute';
 import Header from './pages/Shared/Header/Header'
 import ManageProducts from './pages/Dashboard/ManageProducts/ManageProducts';
 import Payment from './pages/Dashboard/Payment/Payment';
+import AddSecondHandBike from './pages/AddSecondHandBike/AddSecondHandBike';
 const axios = require('axios').default;
 
 function App() {
@@ -55,6 +56,10 @@ function App() {
 
           <Route path="/login">
             <Login></Login>
+          </Route>
+
+          <Route path="/sellBike">
+            <AddSecondHandBike></AddSecondHandBike>
           </Route>
 
           <Route path="/register">

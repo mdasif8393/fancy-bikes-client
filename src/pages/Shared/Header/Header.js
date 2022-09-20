@@ -24,12 +24,18 @@ const {user, logout} = useAuth();
                     <Link to="/exploreBikes" className="nav-link active" aria-current="page" >Explore Bikes</Link>
                   </li>
 
+                  
+
                   {
                     user.email && <li className="nav-item header-link-hover">
                                     <Link to="/dashboard" className="nav-link active" aria-current="page" >Dashboard</Link>
                                   </li>
                   }
                   
+                  {/* <li className="nav-item header-link-hover">
+                    <Link to="/sellBike" className="nav-link active" aria-current="page" >Sell Bike</Link>
+                  </li> */}
+
                 </ul>
                 <form className="d-flex">
                   {

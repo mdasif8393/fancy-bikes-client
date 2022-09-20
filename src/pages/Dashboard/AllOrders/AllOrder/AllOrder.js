@@ -9,6 +9,7 @@ const AllOrder = ({order, index, updateStatus, deleteOrder}) => {
             deleteOrder(id);
         }
     }
+    console.log(orderStatus)
     return (
         <tbody>
                 <tr>
@@ -19,7 +20,7 @@ const AllOrder = ({order, index, updateStatus, deleteOrder}) => {
                 <td>{email}</td>
                 <td>{orderStatus}</td>
                 <td><button onClick={()=> deleteUser(_id)} className="btn btn-outline-danger" >Delete Order</button>
-                    <button onClick={()=> updateStatus(_id)} className="btn btn-outline-success" >Update Status</button>
+                    <button onClick={()=> updateStatus(_id)} className={orderStatus === 'shipped' ? 'd-none' : 'btn btn-outline-success d-block'} >Update Status</button>
                 </td>
                 </tr>
 

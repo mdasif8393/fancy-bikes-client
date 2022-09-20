@@ -18,6 +18,10 @@ const PurchaseProduct = () => {
     //react hook form
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
+        if(data.number.length != 10){
+            alert("Mobile number must be 10 character excluding +880");
+            return;
+        }
         data.bikeName = bike.name;
         data.bikePrice = bike.price;
         data.bikeImage = bike.image;
@@ -65,8 +69,11 @@ const PurchaseProduct = () => {
                 <TextField sx={{width: '100%',}} label="User Name" variant="standard" required value={user.displayName || ''} {...register("name")} />
 
                 <TextField sx={{width: '100%',}} label="User Email" variant="standard" required value={user.email || ''} {...register("email")} />
-
-                <TextField sx={{width: '100%',}}  label="Contact Number" variant="standard" required {...register("number")} />
+                <div className="d-flex justify-content-center align-items-center">
+                    <small className="fs-6">+880</small>
+                    <TextField type="number" sx={{width: '100%',}}  label="Contact Number" variant="standard" required {...register("number")} />
+                </div>
+                
 
                 <TextField sx={{width: '100%',}}  label="Address" variant="standard" required {...register("address")} />
 
