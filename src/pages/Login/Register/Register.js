@@ -7,6 +7,19 @@ const Register = () => {
     const [loginData, setLoginData] = useState({});
     const history = useHistory();
 
+    const [name, setName] = useState('');
+    const handleNameChange = (e) => {
+        const newName = e.target.value;
+        const regEx = /^[a-zA-Z\s]*$/;
+        if(regEx.test(newName) === false) {
+            alert("You can use only letters in Your Name Field");
+            e.target.value = '';
+            return;
+        }
+        else{
+            setName(newName);
+        }
+    }
     const {user, registerUser, isLoading, authError} = useAuth();
 
     const handleOnBlur = e => {
@@ -16,7 +29,8 @@ const Register = () => {
         newLoginData[field] = value; //new thing to set value
         setLoginData(newLoginData);
     }
-
+    
+    
 
     const handleLoginSubmit = e => {
         if(loginData.password !== loginData.password2){
@@ -24,7 +38,7 @@ const Register = () => {
             return;
         }
 
-        registerUser(loginData.email, loginData.password, loginData.name, history);
+        registerUser(loginData.email, loginData.password, name, history);
         e.preventDefault();
     }
     return (
@@ -37,13 +51,13 @@ const Register = () => {
                 
                 { !isLoading && 
                     <form onSubmit={handleLoginSubmit}>
-                        <TextField sx={{width: '75%',}} id="standard-basic" label="Name" variant="standard"  name="name" onBlur={handleOnBlur} />
+                        <TextField sx={{width: '75%',}} id="standard-basic" label="Name" variant="standard"  name="name" onBlur={handleNameChange} required/>
 
-                        <TextField sx={{width: '75%',}} id="standard-basic" label="email" variant="standard"  name="email" type="email" onBlur={handleOnBlur} />
+                        <TextField sx={{width: '75%',}} id="standard-basic" label="email" variant="standard"  name="email" type="email" onBlur={handleOnBlur} required/>
 
-                        <TextField sx={{width: '75%',}} id="standard-basic" label="password" type="password" variant="standard" name="password" onBlur={handleOnBlur}/>
+                        <TextField sx={{width: '75%',}} id="standard-basic" label="password" type="password" variant="standard" name="password" onBlur={handleOnBlur} required/>
                         
-                        <TextField sx={{width: '75%',}} id="standard-basic" label="Retype password" type="password" variant="standard" name="password2" onBlur={handleOnBlur}/>
+                        <TextField sx={{width: '75%',}} id="standard-basic" label="Retype password" type="password" variant="standard" name="password2" onBlur={handleOnBlur} required/>
 
                         <Button sx={{width: '75%',}} type="submit" variant="contained">Register</Button>
                         

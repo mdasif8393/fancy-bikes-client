@@ -38,9 +38,9 @@ const Login = () => {
                 </Typography>
                 
                 <form onSubmit={handleLoginSubmit}>
-                    <TextField sx={{width: '75%',}} id="standard-basic" label="email" variant="standard" name="email" onBlur={handleOnChange} />
+                    <TextField sx={{width: '75%',}} type="email" id="standard-basic" label="email" variant="standard" name="email" onBlur={handleOnChange} required/>
 
-                    <TextField sx={{width: '75%',}} id="standard-basic" label="password" type="password" variant="standard" name="password" onBlur={handleOnChange}/>
+                    <TextField sx={{width: '75%',}} id="standard-basic" label="password" type="password" variant="standard" name="password" onBlur={handleOnChange} required/>
 
                     <Button sx={{width: '75%',}} type="submit" variant="contained">Login</Button>
                     <NavLink style={{textDecoration: 'none'}} to='/register'><Button  variant="text">New User? Please Register</Button></NavLink>
