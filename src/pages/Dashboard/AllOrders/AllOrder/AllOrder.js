@@ -9,7 +9,6 @@ const AllOrder = ({order, index, updateStatus, deleteOrder}) => {
             deleteOrder(id);
         }
     }
-    console.log(orderStatus)
     return (
         <tbody>
                 <tr>

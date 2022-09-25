@@ -59,6 +59,13 @@ function Dashboard(props) {
 
                 <li className="nav-item header-link-hover">
                     <Link to="/manageProducts" className="nav-link active" aria-current="page" >Manage Products</Link>
+                </li>
+                <hr />
+                <div>
+                  <h6 className="text-danger">Used Bikes Section</h6>
+                </div>
+                <li className="nav-item header-link-hover">
+                    <Link to="/allBikesOrders" className="nav-link active" aria-current="page" >Manage Used Bikes</Link>
                 </li>   
             </div>
             :
@@ -75,9 +82,18 @@ function Dashboard(props) {
                 <li className="nav-item header-link-hover">
                     <Link to="/payment" className="nav-link active" aria-current="page" >Payment</Link>
                 </li>
+
+                <hr />
+                <div>
+                  <h6 className="text-danger">Used Bikes Section</h6>
+                </div>
+
+                <li className="nav-item header-link-hover">
+                    <Link to="/manageUsedUserBikes" className="nav-link active" aria-current="page" >My Advertised Bikes</Link>
+                </li>
             </div>
         }
-
+                <br />
                 <button onClick={logout} className="btn btn-outline-danger" >Logout</button>
       </ul>
       <Divider />

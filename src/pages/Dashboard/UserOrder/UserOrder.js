@@ -21,7 +21,7 @@ const UserOrder = ({order, cancelOrder}) => {
                     <h5 className="card-title">{bikeName}</h5>
                     <p className="card-text">{bikePrice} taka</p>
                     <p>Order Status: {orderStatus}</p>
-                    <button className={orderStatus === 'shipped'? 'btn btn-outline-danger show-button' : 'hide-button'}onClick={()=>handleCancelOrder(_id)} ><i class="fas fa-trash-alt"></i> Cancel Order</button>
+                    <button className={orderStatus === 'pending'? 'btn btn-outline-danger show-button' : 'hide-button'}onClick={()=>handleCancelOrder(_id)} ><i class="fas fa-trash-alt"></i> Cancel Order</button>
                 </div>
                 </div>
             </div>

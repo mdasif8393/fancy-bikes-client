@@ -24,7 +24,11 @@ import AdminRoute from './pages/Login/PrivateRoute/AdminRoute';
 import Header from './pages/Shared/Header/Header'
 import ManageProducts from './pages/Dashboard/ManageProducts/ManageProducts';
 import Payment from './pages/Dashboard/Payment/Payment';
-import AddSecondHandBike from './pages/AddSecondHandBike/AddSecondHandBike';
+import SellBike from './pages/SecondHandBike/SellBike';
+import AllBikesOrders from './pages/SecondHandBike/AllBikesOrders';
+import SecondHandBikes from './pages/SecondHandBike/SecondHandBikes';
+import NotFound from './pages/Shared/NotFound';
+import ManageUsedUserBikes from './pages/SecondHandBike/ManageUsedUserBikes';
 const axios = require('axios').default;
 
 function App() {
@@ -58,9 +62,7 @@ function App() {
             <Login></Login>
           </Route>
 
-          <Route path="/sellBike">
-            <AddSecondHandBike></AddSecondHandBike>
-          </Route>
+          
 
           <Route path="/register">
             <Register></Register>
@@ -93,9 +95,27 @@ function App() {
           <AdminRoute path="/manageProducts">
             <ManageProducts></ManageProducts>
           </AdminRoute>
+          
+          {/* Second Hand Bikes */}
+          <PrivateRoute path="/sellbike">
+            <SellBike></SellBike>
+          </PrivateRoute>
 
+          <Route path="/allBikesOrders">
+            <AllBikesOrders></AllBikesOrders>
+          </Route>
 
+          <PrivateRoute path="/secondHandBikes">
+            <SecondHandBikes></SecondHandBikes>
+          </PrivateRoute>
 
+          <Route path="/manageUsedUserBikes">
+            <ManageUsedUserBikes></ManageUsedUserBikes>
+          </Route>
+
+          <Route exact path = "*">
+            <NotFound></NotFound>
+          </Route>
 
         </Switch>
 

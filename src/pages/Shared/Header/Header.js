@@ -21,7 +21,15 @@ const {user, logout} = useAuth();
                   </li>
 
                   <li className="nav-item header-link-hover">
-                    <Link to="/exploreBikes" className="nav-link active" aria-current="page" >Explore Bikes</Link>
+                    <Link to="/exploreBikes" className="nav-link active" aria-current="page" >New Bikes</Link>
+                  </li>
+
+                  <li className="nav-item header-link-hover">
+                    <Link to="/secondHandBikes" className="nav-link active" aria-current="page" >Used Bikes</Link>
+                  </li>
+
+                  <li className="nav-item header-link-hover">
+                    <Link to="/sellbike" className="nav-link active" aria-current="page" >Sell Bike</Link>
                   </li>
 
                   
