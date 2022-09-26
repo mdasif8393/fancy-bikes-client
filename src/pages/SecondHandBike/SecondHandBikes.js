@@ -16,7 +16,7 @@ const SecondHandBikes = () => {
     return (
         <div className="container">
             <div className="home-products-container row" style={{marginTop: '50px'}}>
-            <h3 style={{color:'rgb(255, 67, 59)', fontWeight: 'bold'}} className="text-center">Bikes</h3>
+            <h3 style={{color:'rgb(255, 67, 59)', fontWeight: 'bold'}} className="text-center">Used Bikes</h3>
             {
                     allBikes.map(bike=> <SecondHandBike key={bike._id} bike={bike}></SecondHandBike>)
             }

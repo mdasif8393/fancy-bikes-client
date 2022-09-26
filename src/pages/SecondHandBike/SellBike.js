@@ -34,6 +34,7 @@ const SellBike = () => {
     return (
         <div>
              <Container>
+                <h3 className="text-center text-danger mt-2">Sell Your Used Bike</h3>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     
                     <TextField sx={{width: 1}} required={true}  {...register("name")}  label="Bike Name" variant="standard" type="text"/> <br/>

@@ -10,11 +10,11 @@ const ManageUsedUserBike = ({order, cancelOrder}) => {
         }
     }
     return (
-        <div  className="col-md-12 col-sm-12 ">
-                <div className="card mb-3 " style={{width: '580px',}}>
+        <div  className="col-md-12 col-sm-12">
+                <div className="card mb-3 card-hover" style={{width: '580px',}}>
             <div className="row g-0">
                 <div className="col-md-4">
-                <img src={image} style={{height: '150px', width: '250px'}} className="img-fluid rounded-start" alt="..."/>
+                <img src={image} style={{height: '183px', width: '250px'}} className="img-fluid rounded-start" alt="..."/>
                 </div>
                 <div className="col-md-8">
                 <div className="card-body">

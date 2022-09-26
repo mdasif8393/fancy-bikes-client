@@ -36,6 +36,7 @@ const AllBikesOrders = () => {
     }
     return (
         <div>
+            <h3 className="text-center text-danger mt-2">Manage Used Bikes</h3>
             <div className="container text-center">
             <table className="table thead-dark table-hover">
             <thead className="thead-dark">
